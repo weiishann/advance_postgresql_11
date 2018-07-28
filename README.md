@@ -9,10 +9,10 @@ First install [Vagrant] and [Virtual Box].
 Then, run the following to create a new PostgreSQL app dev virtual machine:
 
 	# Clone it locally:
-    $ git clone https://github.com/jackdb/pg-app-dev-vm myapp
+    $ git clone https://github.com/weiishann/advance_postgresql_11.git
 
     # Enter the cloned directory:
-    $ cd myapp
+    $ cd advance_postgresql_11
 
     # Delete the old .git and README:
     $ rm -rf README.md .git
