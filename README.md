@@ -40,24 +40,11 @@ Once it has started up it will print out how to access the database on the virtu
     Your PostgreSQL database has been setup and can be accessed on your local machine on the forwarded port (default: 15432)
       Host: localhost
       Port: 15432
-      Database: myapp
-      Username: myapp
-      Password: dbpass
 
     Admin access to postgres user via VM:
       vagrant ssh
       sudo su - postgres
 
-    psql access to app database user via VM:
-      vagrant ssh
-      sudo su - postgres
-      PGUSER=myapp PGPASSWORD=dbpass psql -h localhost myapp
-
-    Env variable for application development:
-      DATABASE_URL=postgresql://myapp:dbpass@localhost:15432/myapp
-
-    Local command to access the database via psql:
-      PGUSER=myapp PGPASSWORD=dbpass psql -h localhost -p 15432 myapp
 
 ### Why use the shell provisioner?
 
