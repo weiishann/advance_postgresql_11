@@ -23,11 +23,11 @@ Then, run the following to create a new PostgreSQL app dev virtual machine:
     # Stop the virtual machine:
     $ vagrant halt
 
-### How to install sample database(AdventureWorks) ###
+### How to install sample database (AdventureWorks)
 
-As postgres user:
-psql -c "CREATE DATABASE \"Adventureworks\";"
-psql -d Adventureworks < install.sql
+# As postgres user:
+$ psql -c "CREATE DATABASE \"Adventureworks\";"
+$ psql -d Adventureworks < install.sql
 
 ### What does it do?
 
