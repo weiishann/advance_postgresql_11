@@ -1,6 +1,6 @@
 ### What is it?
 
-A Vagrant configuration that starts up a PostgreSQL database in a virtual machine for local application development.
+A Vagrant configuration that starts up a PostgreSQL database in a virtual machine. This was original forked from https://github.com/jackdb/pg-app-dev-vm and modified for the purpose of creating a tutorial video series for Packt. It also includes the AdventureWorks sample database that was forked from https://github.com/lorint/AdventureWorks-for-Postgres
 
 ### Installation
 
@@ -14,11 +14,6 @@ Then, run the following to create a new PostgreSQL app dev virtual machine:
     # Enter the cloned directory:
     $ cd advance_postgresql_11
 
-    # Delete the old .git and README:
-    $ rm -rf README.md .git
-
-    # Optionally edit the database username/password:
-    $ $EDITOR Vagrant-setup/bootstrap.sh
 
 ### Usage
 
@@ -30,7 +25,7 @@ Then, run the following to create a new PostgreSQL app dev virtual machine:
 
 ### What does it do?
 
-It creates a virtual server running Ubuntu 14.04 with the latest version of PostgreSQL (*as of writing 9.4*) installed. It also edits the PostgreSQL configuration files to allow network access and creates a database user/database for your application to use.
+It creates a virtual server running CentOS 7.5 with the PostgreSQL 11 Beta 2 installed. It also edits the PostgreSQL configuration files to allow network access.
 
 Once it has started up it will print out how to access the database on the virtual machine. It will look something like this:
 
@@ -46,15 +41,9 @@ Once it has started up it will print out how to access the database on the virtu
       sudo su - postgres
 
 
-### Why use the shell provisioner?
-
-Or alternatively, why not [Chef](http://www.getchef.com/chef/), [Puppet](http://puppetlabs.com/), [Ansible](http://www.ansibleworks.com/), or [Salt](http://www.saltstack.com/)?
-
-Mainly because it's simple and anybody with a basic knowledge of shell scripting can tweak the `bootstrap.sh` to their liking.
-
 ### License
 
 This is released under the MIT license. See the file [LICENSE](LICENSE).
 
 [Virtual Box]: https://www.virtualbox.org/
-Vagrant]: http://www.vagrantup.com/
+[Vagrant]: http://www.vagrantup.com/
