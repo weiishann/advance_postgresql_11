@@ -23,6 +23,12 @@ Then, run the following to create a new PostgreSQL app dev virtual machine:
     # Stop the virtual machine:
     $ vagrant halt
 
+### How to install sample database(AdventureWorks) ###
+
+As postgres user:
+psql -c "CREATE DATABASE \"Adventureworks\";"
+psql -d Adventureworks < install.sql
+
 ### What does it do?
 
 It creates a virtual server running CentOS 7.5 with the PostgreSQL 11 Beta 2 installed. It also edits the PostgreSQL configuration files to allow network access.
